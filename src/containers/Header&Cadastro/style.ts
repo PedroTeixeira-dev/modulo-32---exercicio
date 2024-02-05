@@ -12,7 +12,6 @@ export const Header = styled.header`
   h2 {
     margin-top: 16px;
     color: #2525e9;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
   input {
@@ -32,6 +31,10 @@ export const Header = styled.header`
     border-radius: 4px;
     color: #ebf2ff;
     cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  button:hover {
+    box-shadow: 1px 1px 12px 2px #2525ff;
   }
 `
 
