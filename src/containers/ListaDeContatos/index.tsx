@@ -1,5 +1,5 @@
 import { Card } from '../../components/CardContato'
-import { TodosContatos } from './style'
+import { Main, TodosContatos } from './style'
 
 export type Contato = {
   nome: string
@@ -43,7 +43,7 @@ const ListaDeContatos = () => {
 
   return (
     <>
-      <main>
+      <Main>
         <TodosContatos>
           {listaDeContato.map((contato) => (
             <li key={contato.telefone}>
@@ -55,7 +55,7 @@ const ListaDeContatos = () => {
             </li>
           ))}
         </TodosContatos>
-      </main>
+      </Main>
     </>
   )
 }
