@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { Contato } from '../../containers/ListaDeContatos'
 import { CardContato } from './styled'
-import MinhaImagem from '../../assets/icons/contato.png'
+// import MinhaImagem from '../../assets/icons/contato.png'
 import { useState } from 'react'
 import { remover } from '../../store/reducers/contatos'
 
@@ -14,7 +14,9 @@ export const Card = ({ nome, telefone, email }: Contato) => {
 
   return (
     <CardContato>
-      <img srcSet={MinhaImagem} />
+      {
+        //<img srcSet={MinhaImagem} />
+      }
 
       <input disabled={!estaEditando} defaultValue={nome} />
       <input disabled={!estaEditando} defaultValue={telefone} />
