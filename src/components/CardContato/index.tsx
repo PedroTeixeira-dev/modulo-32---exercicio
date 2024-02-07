@@ -4,7 +4,6 @@ import { CardContato } from './styled'
 // import MinhaImagem from '../../assets/icons/contato.png'
 import { useState } from 'react'
 import { remover } from '../../store/reducers/contatos'
-import InputMask from 'react-input-mask'
 
 export const Card = ({ nome, telefone, email }: Contato) => {
   const [estaEditando, setEstaEditando] = useState(false)
@@ -19,11 +18,7 @@ export const Card = ({ nome, telefone, email }: Contato) => {
         //<img srcSet={MinhaImagem} />
       }
       <input disabled={!estaEditando} defaultValue={nome} />
-      <InputMask
-        mask="(99) 9 9999-9999"
-        disabled={!estaEditando}
-        defaultValue={telefone}
-      />
+      <input disabled={!estaEditando} defaultValue={telefone} />
       <input disabled={!estaEditando} defaultValue={email} />
       {estaEditando ? (
         <button onClick={() => setEstaEditando(false)} className="salvar">

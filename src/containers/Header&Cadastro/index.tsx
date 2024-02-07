@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux'
 import { Header } from './style'
 import { FormEvent, useState } from 'react'
 import { adicionar } from '../../store/reducers/contatos'
-import InputMask from 'react-input-mask'
 
 const Cadastro = () => {
   const dispatch = useDispatch()
@@ -35,8 +34,7 @@ const Cadastro = () => {
           placeholder="Nome"
           id="nome"
         />
-        <InputMask
-          mask="(99) 9 9999-9999"
+        <input
           onChange={(evento) => setTelefone(parseInt(evento.target.value))}
           type="tel"
           placeholder="Telefone"
