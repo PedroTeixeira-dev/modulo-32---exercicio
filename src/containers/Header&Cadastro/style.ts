@@ -13,6 +13,9 @@ export const Header = styled.header`
     margin-top: 16px;
     color: #2525e9;
   }
+  span {
+    border-bottom: #2525e9 solid 3px;
+  }
 
   input {
     margin-right: 8px;

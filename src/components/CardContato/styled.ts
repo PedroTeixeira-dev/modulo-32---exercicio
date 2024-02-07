@@ -36,6 +36,7 @@ export const CardContato = styled.div`
     margin-bottom: 2px;
     margin-top: 4px;
     cursor: pointer;
+    margin-bottom: 6px;
   }
 
   .editar {
@@ -44,6 +45,9 @@ export const CardContato = styled.div`
 
   .deletar {
     background-color: #c4130a;
-    margin-bottom: 6px;
+  }
+
+  .salvar {
+    background-color: green;
   }
 `

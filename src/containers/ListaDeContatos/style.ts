@@ -10,4 +10,5 @@ export const TodosContatos = styled.ul`
 export const Main = styled.main`
   height: 100%;
   overflow-y: scroll;
+  height: 100vh;
 `

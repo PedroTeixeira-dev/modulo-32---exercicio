@@ -1,5 +1,7 @@
+import { useSelector } from 'react-redux'
 import { Card } from '../../components/CardContato'
 import { Main, TodosContatos } from './style'
+import { RootReducer } from '../../store'
 
 export type Contato = {
   nome: string
@@ -8,38 +10,9 @@ export type Contato = {
 }
 
 const ListaDeContatos = () => {
-  const listaDeContato = [
-    {
-      nome: 'Pedro',
-      telefone: 988330918,
-      email: 'pedro@teste.com'
-    },
-    {
-      nome: 'Maria',
-      telefone: 988241569,
-      email: 'maria@gmail.com'
-    },
-    {
-      nome: 'zeziniho',
-      telefone: 584654654,
-      email: 'ze@gmail.com'
-    },
-    {
-      nome: 'Pedro',
-      telefone: 988330918,
-      email: 'pedro@teste.com'
-    },
-    {
-      nome: 'Maria',
-      telefone: 988241569,
-      email: 'maria@gmail.com'
-    },
-    {
-      nome: 'zeziniho',
-      telefone: 584654654,
-      email: 'ze@gmail.com'
-    }
-  ]
+  const listaDeContato = useSelector(
+    (state: RootReducer) => state.lista.contatos
+  )
 
   return (
     <>
